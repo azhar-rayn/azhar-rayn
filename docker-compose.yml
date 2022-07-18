@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  db:
+    container_name: dost_container
+    image: postgres
+    restart: always
+    volumes:
+      - ./init-database.sh
+    environment:
+      POSTGRES_USER: testuser
+      POSTGRES_PASSWORD: testpassword
+      POSTGRES_DB: dost
+    ports:
+      - "5432:5432"
