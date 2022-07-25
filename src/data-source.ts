@@ -1,4 +1,5 @@
 import "reflect-metadata"
+import {DB,HOST,PASSWROD,USER, DB_PORT} from './config'
 import { DataSource } from "typeorm"
 import {
     Address,
@@ -25,10 +26,10 @@ import {
 
 export const AppDataSource = new DataSource({
     type: "postgres",
-    host: "localhost",
+    host: HOST,
     port: 5432,
-    username: "testuser",
-    password: "testpassword",
+    username: USER,
+    password: PASSWROD,
     database: "dost",
     synchronize: true,
     logging: false,

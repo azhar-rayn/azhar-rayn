@@ -1,0 +1,144 @@
+{
+    "ipcMode": null,
+    "executionRoleArn": "arn:aws:iam::374947411078:role/dost-network-ECSTaskExecutionRole-2BRDEZD64PP5",
+    "containerDefinitions": [
+        {
+            "dnsSearchDomains": [],
+            "environmentFiles": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "secretOptions": [],
+                "options": {
+                    "awslogs-group": "dost-service",
+                    "awslogs-region": "us-west-2",
+                    "awslogs-stream-prefix": "dost-service"
+                }
+            },
+            "entryPoint": [],
+            "portMappings": [
+                {
+                    "hostPort": 8080,
+                    "protocol": "tcp",
+                    "containerPort": 8080
+                }
+            ],
+            "command": [],
+            "linuxParameters": null,
+            "cpu": 1024,
+            "environment": [
+                {
+                    "name": "SPRING_DATASOURCE_PASSWORD",
+                    "value": "Q>=GCt>r9j7;#s%HW2T'T4{pq-]VD0$*"
+                },
+                {
+                    "name": "SPRING_DATASOURCE_URL",
+                    "value": "jdbc:postgresql://dost-db-postgresinstance-92sgkfbdisde.co8kbnkkawmx.us-west-2.rds.amazonaws.com:5432/dost"
+                },
+                {
+                    "name": "SPRING_DATASOURCE_USERNAME",
+                    "value": "dostuser"
+                }
+            ],
+            "resourceRequirements": null,
+            "ulimits": [],
+            "dnsServers": [],
+            "mountPoints": [],
+            "workingDirectory": null,
+            "secrets": [],
+            "dockerSecurityOptions": [],
+            "memory": 2048,
+            "memoryReservation": null,
+            "volumesFrom": [],
+            "stopTimeout": null,
+            "image": "374947411078.dkr.ecr.us-west-2.amazonaws.com/dost-repo",
+            "startTimeout": null,
+            "firelensConfiguration": null,
+            "dependsOn": null,
+            "disableNetworking": null,
+            "interactive": null,
+            "healthCheck": null,
+            "essential": true,
+            "links": [],
+            "hostname": null,
+            "extraHosts": [],
+            "pseudoTerminal": null,
+            "user": null,
+            "readonlyRootFilesystem": null,
+            "dockerLabels": {},
+            "systemControls": [],
+            "privileged": null,
+            "name": "dost-service"
+        }
+    ],
+    "placementConstraints": [],
+    "memory": "2048",
+    "taskRoleArn": null,
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "taskDefinitionArn": "arn:aws:ecs:us-west-2:374947411078:task-definition/dost-service:9",
+    "family": "dost-service",
+    "requiresAttributes": [
+        {
+            "targetId": null,
+            "targetType": null,
+            "value": null,
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "targetId": null,
+            "targetType": null,
+            "value": null,
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "targetId": null,
+            "targetType": null,
+            "value": null,
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "targetId": null,
+            "targetType": null,
+            "value": null,
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "targetId": null,
+            "targetType": null,
+            "value": null,
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+        },
+        {
+            "targetId": null,
+            "targetType": null,
+            "value": null,
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "targetId": null,
+            "targetType": null,
+            "value": null,
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "targetId": null,
+            "targetType": null,
+            "value": null,
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "pidMode": null,
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "networkMode": "awsvpc",
+    "runtimePlatform": null,
+    "cpu": "1024",
+    "revision": 9,
+    "status": "ACTIVE",
+    "inferenceAccelerators": null,
+    "proxyConfiguration": null,
+    "volumes": []
+}
